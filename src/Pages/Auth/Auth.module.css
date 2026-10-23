@@ -1,0 +1,144 @@
+.logo {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 24px 16px 40px;
+  background: #fff;
+  color: #111;
+}
+
+.logo img {
+  display: block;
+  width: 120px;
+  height: auto;
+  margin: 8px auto 24px;
+  object-fit: contain;
+}
+
+.login_container {
+  width: min(100%, 380px);
+  display: flex;
+  flex-direction: column;
+  padding: 28px 30px 24px;
+  border: 1px solid #d5d9d9;
+  border-radius: 8px;
+  background: #fff;
+  box-shadow: 0 2px 8px rgb(15 17 17 / 7%);
+}
+
+.login_container h1 {
+  margin: 0 0 22px;
+  font-size: 28px;
+  font-weight: 500;
+  line-height: 1.2;
+}
+
+.login_container form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.login_container form div {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+
+.login_container form label {
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.login_container form input {
+  width: 100%;
+  min-height: 42px;
+  padding: 9px 11px;
+  border: 1px solid #888c8c;
+  border-radius: 5px;
+  background: #fff;
+  color: #111;
+  font: inherit;
+  font-size: 15px;
+  transition:
+    border-color 140ms ease,
+    box-shadow 140ms ease;
+}
+
+.login_container form input:hover {
+  border-color: #565959;
+}
+
+.login_container form input:focus-visible {
+  border-color: #007185;
+  outline: 0;
+  box-shadow: 0 0 0 3px rgb(0 113 133 / 18%);
+}
+
+.login_signin_btn,
+.login_registration_btn {
+  width: 100%;
+  min-height: 40px;
+  padding: 9px 14px;
+  border: 1px solid transparent;
+  border-radius: 6px;
+  font: inherit;
+  font-size: 14px;
+  cursor: pointer;
+  transition:
+    background-color 140ms ease,
+    box-shadow 140ms ease,
+    transform 140ms ease;
+}
+
+.login_signin_btn {
+  margin-top: 2px;
+  border-color: #e6a700;
+  background: #ffd814;
+  color: #111;
+}
+
+.login_signin_btn:hover {
+  background: #f7ca00;
+}
+
+.login_container p {
+  margin: 19px 0 8px;
+  color: #333;
+  font-size: 12px;
+  line-height: 1.55;
+}
+
+.login_registration_btn {
+  margin-top: 8px;
+  border-color: #adb1b8;
+  background: #fff;
+  color: #111;
+}
+
+.login_registration_btn:hover {
+  background: #f7fafa;
+  border-color: #888c8c;
+}
+
+.login_signin_btn:focus-visible,
+.login_registration_btn:focus-visible {
+  outline: 3px solid rgb(0 113 133 / 35%);
+  outline-offset: 2px;
+}
+
+.login_signin_btn:active,
+.login_registration_btn:active {
+  transform: translateY(1px);
+}
+
+@media (max-width: 420px) {
+  .logo {
+    padding: 18px 14px 32px;
+  }
+
+  .login_container {
+    padding: 24px 20px 20px;
+  }
+}

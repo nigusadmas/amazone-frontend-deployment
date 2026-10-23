@@ -1,0 +1,10 @@
+.panel { width: min(760px, calc(100% - 32px)); margin: clamp(32px, 8vw, 90px) auto; padding: clamp(24px, 5vw, 48px); border: 1px solid #e1e6e9; border-radius: 12px; background: #fff; box-shadow: 0 4px 20px rgb(15 23 42 / 6%); }
+.eyebrow { margin: 0 0 8px; color: #087b88; font-size: 12px; font-weight: 750; letter-spacing: .12em; text-transform: uppercase; }
+.panel h1 { margin: 0 0 12px; color: #17212b; font-size: clamp(28px, 6vw, 40px); }
+.panel > p:not(.eyebrow) { color: #63717c; line-height: 1.6; }
+.actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 24px; }
+.actions a { padding: 11px 16px; border: 1px solid #f0b800; border-radius: 7px; background: #ffd814; color: #17212b; font-weight: 650; text-decoration: none; }
+.deliveryForm { display: grid; max-width: 420px; gap: 10px; margin-top: 24px; }
+.deliveryForm label { color: #26323a; font-size: 14px; font-weight: 650; }
+.deliveryForm select { min-height: 44px; padding: 0 12px; border: 1px solid #aab3b8; border-radius: 7px; background: white; color: #17212b; font: inherit; }
+.deliveryForm button { min-height: 44px; margin-top: 4px; padding: 0 16px; border: 1px solid #f0b800; border-radius: 7px; background: #ffd814; color: #17212b; font: inherit; font-weight: 700; cursor: pointer; }
