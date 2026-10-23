@@ -33,9 +33,13 @@ function Routing() {
           path="/payment"
           element={
             <ProtectedRoute msg={"You must login to pay"} redirect={"/payment"}>
-              <Elements stripe={stripePromise}>
-                <Payment />
-              </Elements>
+              {stripePromise ? (
+                <Elements stripe={stripePromise}>
+                  <Payment />
+                </Elements>
+              ) : (
+                <Payment stripeConfigMissing />
+              )}
             </ProtectedRoute>
           }
         />

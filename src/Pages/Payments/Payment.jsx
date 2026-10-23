@@ -9,7 +9,7 @@ import { axiosInstance } from "../../Api/axios";
 import { db } from "../../Utility/firebase";
 import { Type } from "../../Utility/actionTypes";
 import { useNavigate } from "react-router-dom";
-function Payment() {
+function Payment({ stripeConfigMissing = false }) {
   const [{ user, basket = [] }, dispatch] = useContext(DataContext);
   const [cardError, setCardError] = useState("");
   const [paymentError, setPaymentError] = useState("");
@@ -169,7 +169,15 @@ function Payment() {
               )}
 
               {/* card element */}
-              <CardElement onChange={handleChange} />
+              {stripeConfigMissing ? (
+                <p className={classes.payment_error} role="alert">
+                  Card payments are not configured. Add
+                  VITE_STRIPE_PUBLISHABLE_KEY to the Netlify environment
+                  variables, then redeploy this site.
+                </p>
+              ) : (
+                <CardElement onChange={handleChange} />
+              )}
 
               {/* price */}
               <div className={classes.order_total}>
